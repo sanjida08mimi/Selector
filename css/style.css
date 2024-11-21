@@ -1,0 +1,117 @@
+   /* General styling */
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Styling for links */
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1789e8;
+}
+
+/* Pseudo-classes for buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #aba2f6;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: #ddb9f2;
+}
+
+button:focus {
+    outline: 3px solid #ddb9f2;
+}
+
+button:hover {
+    background-color: #ddb9f2;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Styling for list items using nth-child and first-child */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    padding: 10px;
+    background-color: #ecf0f1;
+    margin: 5px 0;
+}
+
+li:nth-child(odd) {
+    background-color: #bdc3c7;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+}
+
+/* Styling for form input */
+input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+input[type="text"]:invalid {
+    border-color: #e74c3c;
+}
+
+/* Pseudo-element examples */
+h1::before {
+    content: "#";
+    color: #f39c12;
+}
+
+h1::after {
+    content: " #";
+    color: #f39c12;
+}
+
+p::first-letter {
+    font-size: 2em;
+    color: #e74c3c;
+}
+
+/* Pseudo-element for a tooltip */
+.tooltip::after {
+    content: "This is a tooltip";
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover::after {
+    display: block;
+    opacity: 1;
+}
